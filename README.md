@@ -7,3 +7,4 @@ This project was generated with node.js v14.18.3
 2. Run command `npm install`
 3. Setup Database MongoDB (db: hospitalDB, collection: queues, visitors)
 4. Run `npm run dev` for a dev server and automatically rerun if there's changed in source code.
+5. You can test on PostMan just import from folder postman.
