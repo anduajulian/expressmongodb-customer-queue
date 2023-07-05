@@ -1,0 +1,179 @@
+{
+	"info": {
+		"_postman_id": "95342d61-2125-476f-9384-28298e45b4f3",
+		"name": "customer-queue-management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "visitors",
+			"item": [
+				{
+					"name": "GETALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/visitors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"visitors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ADD",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"anempat\",\r\n    \"email\": \"antiga@gmail.com\",\r\n    \"gender\": \"man\",\r\n    \"address\": \"jkt\",\r\n    \"nohp\": \"0881238123\",\r\n    \"queue\": \"A001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/visitors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"visitors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/visitors/64a541cb66f4224d981541bd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"visitors",
+								"64a541cb66f4224d981541bd"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "queue",
+			"item": [
+				{
+					"name": "GETALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/queues",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"queues"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ADD",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sequence\": \"1\",\r\n    \"queue\": \"A001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/queues",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"queues"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/queues/A002",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"queues",
+								"A002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetLast",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/queues/newest",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"queues",
+								"newest"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
